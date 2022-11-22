@@ -1,0 +1,50 @@
+
+ {% extends 'base.html' %}
+
+ {% block title %} contact {% endblock title %}
+ 
+ {% block body %} 
+ <div class="container-fluid px-0 mb-3">
+<img src="\static\iimage\contact\ri5skm02140pv2uqndnz.webp" class="d-block w-100 my-0" alt="" srcset="">
+</div> 
+<div class="container">
+<div class="conatiner">
+    <h1 class="text-center">Contact Us</h1>
+    <form method="post" action="/contact" class="row g-2"> 
+      {% csrf_token %}
+        <div class="mb-3">
+            <label for="validationCustom01" class="form-label">Full Name</label>
+            <input type="text" class="form-control" name="name" id="validationCustom01" value="" placeholder="jitendra Galav" required="">
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          
+      <div class="mb-3">
+        <label for="validationServer02" class="form-label">Mobile Number</label>
+        <input type="text" class="form-control " name="phone" id="validationServer02" placeholder="Enter Ten Digit Mobile Number" value="" required>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+     <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="desc" placeholder="You Have Created wonderfull Web-Site,I am pround Of You." rows="3"></textarea>
+      </div>
+      <div class="col-12">
+        
+      </div>
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form>
+</div>
+
+
+ {% endblock body %}
+
+
+
